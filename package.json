@@ -19,6 +19,7 @@
     "react-dom": "^18.1.0",
     "react-icons": "^4.7.1",
     "react-loader-spinner": "^5.3.4",
+    "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
     "react-simple-image-viewer": "^1.2.2",
     "react-simple-lightbox": "^1.0.26",
