@@ -76,6 +76,7 @@ export const Grid = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: ${props => props.theme.spacing.step * 5}px;
+  margin-top: 20px;
 `;
 
 export const GridItem = styled.li`
@@ -96,5 +97,39 @@ export const GridItem = styled.li`
   &:focus {
     transform: scale(1.05);
     box-shadow: 0px 2px 10px 2px ${props => props.theme.colors.primary};
+  }
+`;
+export const Button = styled.p`
+  font-size: ${props => props.theme.fontSizes.small};
+  font-weight: 700;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: ${props => props.theme.breakpoints.s}) {
+    font-size: ${props => props.theme.fontSizes.medium};
+  }
+  @media (min-width: ${props => props.theme.breakpoints.m}) {
+    font-size: ${props => props.theme.fontSizes.large};
+  }
+  @media (min-width: ${props => props.theme.breakpoints.l}) {
+    margin-bottom: ${props => props.theme.spacing.step * 20}px;
+  }
+`;
+export const ButtonRev = styled.p`
+  font-size: ${props => props.theme.fontSizes.small};
+  font-weight: 700;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: ${props => props.theme.breakpoints.s}) {
+    font-size: ${props => props.theme.fontSizes.medium};
+  }
+  @media (min-width: ${props => props.theme.breakpoints.m}) {
+    font-size: ${props => props.theme.fontSizes.large};
+  }
+  @media (min-width: ${props => props.theme.breakpoints.l}) {
+    margin-bottom: ${props => props.theme.spacing.step * 20}px;
   }
 `;

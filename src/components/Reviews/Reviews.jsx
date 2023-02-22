@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getMovieRewiewsById } from 'service/api';
-import { Grid, GridItem, Text } from 'components/App/App.styled';
+import { Grid, GridItem } from 'components/App/App.styled';
 
 function Reviews({ id, btn }) {
   const [reviews, setReviews] = useState([]);
@@ -22,7 +22,7 @@ function Reviews({ id, btn }) {
         {reviews.length !== 0 ? (
           reviews.map(({ id, content, author }) => (
             <GridItem key={id}>
-              <Text>{author}</Text>
+              <p>{author}</p>
               <p>{content}</p>
             </GridItem>
           ))

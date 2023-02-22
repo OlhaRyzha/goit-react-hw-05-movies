@@ -40,6 +40,7 @@ export const Image = styled.img`
   border-radius: 8px;
   box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
   z-index: 1;
+  margin-bottom: 10px;
 `;
 
 export const MovieTitle = styled.h3`

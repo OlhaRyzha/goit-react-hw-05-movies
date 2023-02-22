@@ -12,15 +12,22 @@ import {
 import { Link } from 'react-router-dom';
 import Cast from 'components/Cast/Cast';
 import Reviews from 'components/Reviews/Reviews';
+import { Button, ButtonRev } from 'components/App/App.styled';
 
 const MovieInfo = ({ title, id, score, overview, img, genres }) => {
   const [btn, setBtn] = useState(true);
   const [btnRewievs, setBtnRewievs] = useState(true);
-  const onBtnCkick = () => {
+  const onBtnCkick = e => {
     setBtn(!btn);
+    if (btnRewievs === false) {
+      setBtnRewievs(true);
+    }
   };
   const onBtnRewievsCkick = () => {
     setBtnRewievs(!btnRewievs);
+    if (btn === false) {
+      setBtn(true);
+    }
   };
   return (
     <>
@@ -45,9 +52,9 @@ const MovieInfo = ({ title, id, score, overview, img, genres }) => {
 
           <Accent>
             <Link to="cast">
-              <button type="button" onClick={onBtnCkick}>
+              <Button type="button" onClick={onBtnCkick}>
                 Cast
-              </button>
+              </Button>
               <Cast id={id} btn={btn} />
             </Link>
           </Accent>
@@ -55,7 +62,7 @@ const MovieInfo = ({ title, id, score, overview, img, genres }) => {
           <Accent>
             <Link to="reviews">
               <button type="button" onClick={onBtnRewievsCkick}>
-                Reviews
+                <ButtonRev>Reviews</ButtonRev>
               </button>
               <Reviews id={id} btn={btnRewievs} />
             </Link>

@@ -35,7 +35,7 @@ const MovieDetails = () => {
       .finally(() => {
         setIsLoading(false);
       });
-  }, [movieId, genres]);
+  }, [movieId]);
 
   return (
     <Section>
