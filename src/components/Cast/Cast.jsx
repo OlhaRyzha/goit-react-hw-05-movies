@@ -1,16 +1,13 @@
 import { useEffect, useState } from 'react';
 import { getMovieCastById } from 'service/api';
-import { Loader } from './../Loader/Loader';
-import { Grid, GridItem } from 'components/App/App.styled';
-import { Text } from 'components/App/App.styled';
+import { Grid, GridItem, Text } from 'components/App/App.styled';
+import Loader from 'components/Loader/Loader';
 
-export function Cast({ id }) {
+function Cast({ id, btn }) {
   const [cast, setCast] = useState([]);
-  const [btn, setBtn] = useState(true);
+
   const [isLoading, setIsLoading] = useState(false);
-  const onBtnCkick = () => {
-    setBtn(!btn);
-  };
+
   useEffect(() => {
     setIsLoading(true);
     if (!id) return;
@@ -30,9 +27,7 @@ export function Cast({ id }) {
   return (
     <>
       {isLoading && <Loader />}
-      <button type="button" onClick={onBtnCkick}>
-        Cast
-      </button>
+
       <Grid style={{ display: btn ? 'none' : 'block' }}>
         {cast.map(({ id, profile_path, name }) => (
           <GridItem key={id}>
@@ -51,3 +46,4 @@ export function Cast({ id }) {
     </>
   );
 }
+export default Cast;

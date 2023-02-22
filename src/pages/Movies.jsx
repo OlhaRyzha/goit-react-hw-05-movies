@@ -1,12 +1,12 @@
+import { fetchFilmByQuery } from 'service/api';
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { Section, Container } from './../components/App/App.styled';
-import { SearchForm } from './../components/SearchForm/SearchForm';
-import { Loader } from './../components/Loader/Loader';
-import { MovieList } from 'components/MovieList/MovieList';
-import { fetchFilmByQuery } from 'service/api';
+import { Section, Container } from 'components/App/App.styled';
+import SearchForm from 'components/SearchForm/SearchForm';
+import Loader from 'components/Loader/Loader';
+import MovieList from 'components/MovieList/MovieList';
 
-export const Movies = () => {
+const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const [isLoading, setIsLoading] = useState(false);
@@ -37,3 +37,4 @@ export const Movies = () => {
     </Section>
   );
 };
+export default Movies;

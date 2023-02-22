@@ -6,7 +6,7 @@ import {
   NavLinkStyled,
 } from './Header.styled';
 
-export function Header() {
+function Header() {
   return (
     <>
       <NavBar>
@@ -23,3 +23,4 @@ export function Header() {
     </>
   );
 }
+export default Header;

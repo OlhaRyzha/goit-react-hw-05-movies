@@ -4,11 +4,11 @@ import { getMovieById } from 'service/api';
 import { Container } from 'components/App/App.styled';
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { MovieInfo } from 'components/MovieInfo/MovieInfo';
-import { Loader } from './../components/Loader/Loader';
 import { Section } from './../components/App/App.styled';
+import Loader from 'components/Loader/Loader';
+import MovieInfo from 'components/MovieInfo/MovieInfo';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState({});
   const [isLoading, setIsLoading] = useState(false);
@@ -69,3 +69,4 @@ export const MovieDetails = () => {
     </Section>
   );
 };
+export default MovieDetails;

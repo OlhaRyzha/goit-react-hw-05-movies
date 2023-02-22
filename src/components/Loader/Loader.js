@@ -1,6 +1,6 @@
 import { MutatingDots } from 'react-loader-spinner';
 
-export function Loader() {
+function Loader() {
   return (
     <MutatingDots
       height="100"
@@ -18,3 +18,5 @@ export function Loader() {
     />
   );
 }
+
+export default Loader;

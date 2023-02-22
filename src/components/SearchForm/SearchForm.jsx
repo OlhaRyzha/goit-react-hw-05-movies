@@ -2,7 +2,7 @@ import { FiSearch } from 'react-icons/fi';
 import { BtnSearch, Select, SearchFormStyled } from './SearchForm.styled';
 import { useState } from 'react';
 
-export const SearchForm = ({ onSubmit }) => {
+const SearchForm = ({ onSubmit }) => {
   const [query, setQuery] = useState('');
 
   const handleChange = e => {
@@ -28,3 +28,4 @@ export const SearchForm = ({ onSubmit }) => {
     </SearchFormStyled>
   );
 };
+export default SearchForm;

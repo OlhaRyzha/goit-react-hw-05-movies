@@ -1,10 +1,10 @@
 import { Container, Section } from 'components/App/App.styled';
-import { MovieList } from 'components/MovieList/MovieList';
 import { useEffect, useState } from 'react';
 import { getTrendingMovies } from 'service/api';
-import { Loader } from './../components/Loader/Loader';
+import Loader from 'components/Loader/Loader';
+import MovieList from 'components/MovieList/MovieList';
 
-export const Home = () => {
+const Home = () => {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -28,3 +28,4 @@ export const Home = () => {
     </Section>
   );
 };
+export default Home;
